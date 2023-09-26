@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>마이페이지 수정</title>
+  <link rel="stylesheet" type="text/css" href="블로그.css">
+</head>
+
+<body>
+  <h1>마이페이지 수정</h1>
+
+  <form action="/login/mypage/edit" method="POST">
+    <label for="nickname">닉네임:</label>
+    <input type="text" id="nickname" name="memberNick" value="<%= memberInfo.member_nick %>" required><br>
+  
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="memberEmail" value="<%= memberInfo.member_Email %>" required><br>
+  
+    <label for="firstname">이름(성):</label>
+    <input type="text" id="firstname" name="memberFirstName" value="<%= memberInfo.member_Last_Name %>" required><br>
+  
+    <label for="lastname">이름(이름):</label>
+    <input type="text" id="lastname" name="memberLastName" value="<%= memberInfo.member_First_Name %>" required><br>
+  
+    <label for="phone">전화번호:</label>
+    <input type="tel" id="phone" name="memberTel" value="<%= memberInfo.member_Tel %>" required><br>
+  
+    <button type="submit">수정 완료</button>
+  </form>
+
+  <br>
+
+  <a href="/login/mypage">마이페이지로 돌아가기</a>
+</body>
+
+</html>

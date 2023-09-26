@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>마이페이지</title>
+  <link rel="stylesheet" type="text/css" href="블로그.css">
+  <style>
+    .table > thead > tr > th,
+    .table > thead > tr > td, 
+    .table > tbody > tr > th, 
+    .table > tbody > tr > td, 
+    .table > tfoot > tr > th,
+    .table > tfoot > tr > td {
+        padding: 0.3em;
+    }
+</style>
+</head>
+
+<body>
+  <div class="container-800">
+    <div class="row pb-20">
+  <h1><%= memberInfo.member_nick %>님, 안녕하세요.</h1>
+</div>
+
+  <br><br>
+    
+  <br>
+
+  <table class="table small"  width="530">  
+    <tbody class="left">
+      <tr>
+        <th class="w-30" width="17%">아이디</th>
+        <td><%= memberInfo.member_id %></td>
+      </tr>
+      <tr>
+        <th>닉네임</th>
+        <td><%= memberInfo.member_nick %></td>
+      </tr>
+      <tr>
+        <th>이메일</th>
+        <td><%= memberInfo.member_Email %></td>
+      </tr>
+      <tr>
+        <th>이름</th>
+        <td><%= memberInfo.member_Last_Name %><%= memberInfo.member_First_Name %></td>
+      </tr>
+      <tr>
+        <th>전화번호</th>
+        <td><%= memberInfo.member_Tel %></td>
+      </tr>
+      <tr>
+        <th>포인트</th>
+        <td><%= memberInfo.member_Point %> point</td>
+      </tr>
+      <tr>
+        <th>등급</th>
+        <td><%= memberInfo.member_Level %></td>
+      </tr>
+      <tr>
+        <th>가입일</th>
+        <td><%= memberInfo.member_Join %></td>
+      </tr>
+      <tr>
+        <th>최종로그인</th>
+        <td><%= memberInfo.member_Login %></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <a href="/">메인으로</a>
+  <div class="flex">
+    <a class="link" href="/login/mypage/edit">수정</a>
+    <a class="link" href="/review_board" class="board-link">후기 게시판</a>
+  </div>
+</body>
+
+</html>

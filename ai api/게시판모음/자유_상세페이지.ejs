@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>상세 페이지</title>
+  
+  <style>
+    body {
+      background-color: #f5f5f5; /* 연한 회색 배경색상 */
+      color: #333333; /* 어두운 회색 글자색상 */
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      color: #9933ff; /* 보라색 제목 글자색상 */
+      text-align: center;
+      text-transform: uppercase; /* 제목 글자 대문자로 변환 */
+      margin-top: 50px;
+    }
+
+    p {
+      line-height: 1.5; /* 단락 줄 간격 설정 */
+    }
+
+    .author-info {
+      margin-top: 20px;
+      border-top: 2px solid #999999; /* 회색 선으로 구분선 추가 */
+      padding-top: 10px;
+    }
+
+    .author-info span {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px; /* 작성자 및 작성일 큰 글씨로 설정 */
+      color: #000000; /* 검은색 글자색상 */
+    }
+
+
+
+    /* 전체 화면에 꽉 차도록 컨테이너를 조정합니다. */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 제목과 검색 폼의 스타일을 지정합니다. */
+h1 {
+  margin-top: 50px;
+  
+  margin-bottom: 30px;
+}
+
+form {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  background-color: #4431bf;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #4431bf;
+}
+
+/* 검색 폼 스타일을 조정합니다. */
+.search-form {
+  margin-bottom: 30px;
+}
+
+.search-form input[type="text"] {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.search-form input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/*
+  ul.comment-list li:not(:last-child) {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+*/
+  
+  </style>
+</head>
+<body>
+  <a href="/review_board" class="board-link">후기 게시판</a>
+  <h2><%= vo.board.title %></h2>
+  <p>작성자: <%= vo.board.member_id %></p>
+  <p><%= vo.board.content %></p>
+  <p>작성일: <%= vo.board.rdate %></p>     
+
+
+  <form action="/comments" method="POST">
+    <input type="hidden" name="review_id" value="<%= vo.board.num %>">
+    <textarea class="form-input small w-100" name="comment" placeholder="댓글 내용을 입력하세요"></textarea>
+    <input class="form-btn positive small comment-btn w-10" type="submit" value="댓글 작성">
+  </form>
+  
+  <h3>댓글 목록</h3>
+<ul class="comment-list">
+  <% if (vo.comments && vo.comments.length > 0) { %>
+    <% vo.comments.forEach(function(comment) { %>
+      <li data-id="<%= comment.comment_id %>"> <!-- id를 comment_id로 변경 -->
+        <p>작성자: <%= comment.member_id %></p>
+        <p><%= comment.content %></p> 
+        <p>작성일: <%= comment.comment_date %></p><!-- 시간값 -->
+        <% if (typeof loggedInUser !== 'undefined' && comment.member_id === loggedInUser) { %>
+          <div class="comment-actions">
+            <form action="/review_board/comment/delete/<%= comment.comment_id %>" method="POST" style="display:inline;">  <!-- id를 comment_id로 변경 -->
+              <button type="submit">삭제</button>
+            </form>
+          
+          </div>
+        <% } %>
+      </li>
+    <% }); %>
+  <% } else { %>
+    <li>댓글이 없습니다.</li>
+  <% } %>
+</ul>
+
+  <form action="/review_board/board/delete/<%= vo.board.num %>" method="POST">
+    <input type="submit" value="게시글 삭제">
+  </form>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const commentList = document.querySelectorAll('.comment-list li');
+      commentList.forEach((comment, index) => {
+        // 아래의 'data-id'는 각 댓글 li 요소에 id 값을 저장하는 attribute입니다. 
+        // 실제 코드에 따라 다를 수 있으니, 해당하는 코드로 교체해주세요.
+        console.log(`Comment ${index + 1} id: ${comment.getAttribute('data-id')}`);
+      });
+    });
+  </script>
+ 
+  
+  </body>
+</html>

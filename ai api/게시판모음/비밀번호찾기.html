@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="블로그.css"> <!-- css 링크파일 -->
+    <title>비밀번호 찾기</title>
+
+</head>
+	<form action="findPW" method="post">
+        <div class="container-450">
+            <div class="row center">
+                <h1 class="title">비밀번호 찾기</h1>	
+            </div>
+            <div class="row">
+                <label class="form-label">아이디</label> 
+                <input class="form-input large w-100" type="text" name="memberID" required>
+            </div>
+            <div class="row">
+                <label class="form-label">이메일</label>
+                <input class="form-input large w-100" type="text"   name="memberEmail" required>   
+            </div>
+			<br>
+            <div class="row">
+                <button type="submit" class="form-btn large positive w-100">비밀번호 찾기</button> <!-- 밑에 보라색 로그인 버튼 -->
+            </div>
+			<div class="row center pt-20">
+                <a class="link" href="로그인.html">로그인</a> 
+                <a class="link" href="/">메인으로</a>
+            </div>
+            
+        </div>
+    </form>
+	<br>
+	
+
+	
+
+</body>
+</html>

@@ -1,0 +1,447 @@
+@charset "UTF-8";
+
+/*
+    container 설정
+*/
+.container-100 {
+    width: 100px;
+    margin: 0 auto;
+}
+.container-150 {
+    width: 150px;
+    margin: 0 auto;
+}
+.container-200 {
+    width: 200px;
+    margin: 0 auto;
+}
+.container-250 {
+    width: 250px;
+    margin: 0 auto;
+}
+.container-300 {
+    width: 300px;
+    margin: 0 auto;
+}
+.container-350 {
+    width: 350px;
+    margin: 0 auto;
+}
+.container-400 {
+    width: 400px;
+    margin: 0 auto;
+}
+.container-450 {
+    width: 450px;
+    margin: 0 auto;
+}
+.container-500 {
+    width: 500px;
+    margin: 0 auto;
+}
+.container-550 {
+    width: 550px;
+    margin: 0 auto;
+}
+.container-600 {
+    width: 600px;
+    margin: 0 auto;
+}
+.container-650 {
+    width: 650px;
+    margin: 0 auto;
+}
+.container-700 {
+    width: 700px;
+    margin: 0 auto;
+}
+.container-750 {
+    width: 750px;
+    margin: 0 auto;
+}
+.container-800 {
+    width: 800px;
+    margin: 0 auto;
+}
+.container-850 {
+    width: 850px;
+    margin: 0 auto;
+}
+.container-900 {
+    width: 900px;
+    margin: 0 auto;
+}
+.container-950 {
+    width: 950px;
+    margin: 0 auto;
+}
+.container-1000 {
+    width: 1000px;
+    margin: 0 auto;
+}
+.container-1050 {
+    width: 1050px;
+    margin: 0 auto;
+}
+.container-1100 {
+    width: 1100px;
+    margin: 0 auto;
+}
+.container-1150 {
+    width: 1150px;
+    margin: 0 auto;
+}
+.container-1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+/*
+    폭 설정
+*/
+.w-100 {width: 100%;}
+.w-95 {width: 95%;}
+.w-90 {width: 90%;}
+.w-85 {width: 85%;}
+.w-80 {width: 80%;}
+.w-75 {width: 75%;}
+.w-70 {width: 70%;}
+.w-65 {width: 65%;}
+.w-60 {width: 60%;}
+.w-55 {width: 55%;}
+.w-50 {width: 50%;}
+.w-45 {width: 45%;}
+.w-40 {width: 40%;}
+.w-35 {width: 35%;}
+.w-33 {width: 33.3333%;}
+.w-30 {width: 30%;}
+.w-25 {width: 25%;}
+.w-20 {width: 20%;}
+.w-15 {width: 15%;}
+.w-10 {width: 10%;}
+.w-5 {width: 5%;}
+/*
+    외부여백(margin)
+    .mv: margin vertical
+    .mt: margin-top
+    .mb: margin-bottom
+    .ms: margin-start(left)
+    .me: margin-end(right)
+
+    내부여백(padding)
+    .p: padding
+    .pt: padding-top
+    .pb: padding-bottom
+    .ps: padding-start(left)
+    .pe: padding-end(right)
+*/
+.mv-10 {margin: 10px 0;}
+.mv-20 {margin: 20px 0;}
+.mv-30 {margin: 30px 0;}
+.mv-40 {margin: 40px 0;}
+.mv-50 {margin: 50px 0;}
+.mv-60 {margin: 60px 0;}
+.mv-70 {margin: 70px 0;}
+.mv-80 {margin: 80px 0;}
+.mv-90 {margin: 90px 0;}
+.mv-100 {margin: 100px 0;}
+
+.mt-10 {margin-top: 10px;}
+.mt-20 {margin-top: 20px;}
+.mt-30 {margin-top: 30px;}
+.mt-40 {margin-top: 40px;}
+.mt-50 {margin-top: 50px;}
+.mt-60 {margin-top: 60px;}
+.mt-70 {margin-top: 70px;}
+.mt-80 {margin-top: 80px;}
+.mt-90 {margin-top: 90px;}
+.mt-100 {margin-top: 100px;}
+
+.mb-10 {margin-bottom: 10px;}
+.mb-20 {margin-bottom: 20px;}
+.mb-30 {margin-bottom: 30px;}
+.mb-40 {margin-bottom: 40px;}
+.mb-50 {margin-bottom: 50px;}
+.mb-70 {margin-bottom: 70px;}
+.mb-80 {margin-bottom: 80px;}
+.mb-60 {margin-bottom: 60px;}
+.mb-90 {margin-bottom: 90px;}
+.mb-100 {margin-bottom: 100px;}
+
+.ms-10 {margin-left: 10px;}
+.ms-20 {margin-left: 20px;}
+.ms-30 {margin-left: 30px;}
+.ms-40 {margin-left: 40px;}
+.ms-50 {margin-left: 50px;}
+.ms-60 {margin-left: 60px;}
+.ms-70 {margin-left: 70px;}
+.ms-80 {margin-left: 80px;}
+.ms-90 {margin-left: 90px;}
+.ms-100 {margin-left: 100px;}
+
+.me-10 {margin-right: 10px;}
+.me-20 {margin-right: 20px;}
+.me-30 {margin-right: 30px;}
+.me-40 {margin-right: 40px;}
+.me-50 {margin-right: 50px;}
+.me-60 {margin-right: 60px;}
+.me-70 {margin-right: 70px;}
+.me-80 {margin-right: 80px;}
+.me-90 {margin-right: 90px;}
+.me-100 {margin-right: 100px;}
+
+.p-10 {padding: 10px;}
+.p-20 {padding: 20px;}
+.p-30 {padding: 30px;}
+.p-40 {padding: 40px;}
+.p-50 {padding: 50px;}
+.p-60 {padding: 60px;}
+.p-70 {padding: 70px;}
+.p-80 {padding: 80px;}
+.p-90 {padding: 90px;}
+.p-100 {padding: 100px;}
+
+.pt-10 {padding-top: 10px;}
+.pt-20 {padding-top: 20px;}
+.pt-30 {padding-top: 30px;}
+.pt-40 {padding-top: 40px;}
+.pt-50 {padding-top: 50px;}
+.pt-60 {padding-top: 60px;}
+.pt-70 {padding-top: 70px;}
+.pt-80 {padding-top: 80px;}
+.pt-90 {padding-top: 90px;}
+.pt-100 {padding-top: 100px;}
+
+.pb-10 {padding-bottom: 10px;}
+.pb-20 {padding-bottom: 20px;}
+.pb-30 {padding-bottom: 30px;}
+.pb-40 {padding-bottom: 40px;}
+.pb-50 {padding-bottom: 50px;}
+.pb-60 {padding-bottom: 60px;}
+.pb-70 {padding-bottom: 70px;}
+.pb-80 {padding-bottom: 80px;}
+.pb-90 {padding-bottom: 90px;}
+.pb-100 {padding-bottom: 100px;}
+
+.ps-10 {padding-left: 10px;}
+.ps-20 {padding-left: 20px;}
+.ps-30 {padding-left: 30px;}
+.ps-40 {padding-left: 40px;}
+.ps-50 {padding-left: 50px;}
+.ps-60 {padding-left: 60px;}
+.ps-70 {padding-left: 70px;}
+.ps-80 {padding-left: 80px;}
+.ps-90 {padding-left: 90px;}
+.ps-100 {padding-left: 100px;}
+
+.pe-5 {padding-right: 5px;}
+.pe-10 {padding-right: 10px;}
+.pe-20 {padding-right: 20px;}
+.pe-30 {padding-right: 30px;}
+.pe-40 {padding-right: 40px;}
+.pe-50 {padding-right: 50px;}
+.pe-60 {padding-right: 60px;}
+.pe-70 {padding-right: 70px;}
+.pe-80 {padding-right: 80px;}
+.pe-90 {padding-right: 90px;}
+.pe-100 {padding-right: 100px;}
+/*
+    row 간격 설정
+*/
+.row {
+    margin: 10px 0px;
+}
+
+/*
+    내부 요소 정렬
+*/
+.center {text-align: center;}
+.left {text-align: left;}
+.right {text-align: right;}
+/*
+    입력창, 버튼 등 디자인
+*/
+.form-input.large {
+    font-size: 20px;
+    outline: none;
+    padding: 0.8em;
+    border: 2.5px solid #4431bf;
+    border-radius: 0.5em;
+}
+.form-input.medium {
+    font-size: 16px;
+    outline: none;
+    padding: 0.75em;
+    border: 2px solid #4431bf;
+    border-radius: 0.5em;
+}
+.form-input.small {
+    font-size: 13px;
+    outline: none;
+    padding: 0.5em;
+    border: 2px solid #4431bf;
+    border-radius: 0.5em;
+}
+.form-input:focus {
+    border-color: #36269a;
+}
+.form-btn.large {
+    font-size: 20px;
+    padding: 0.8em;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.form-btn.medium {
+    font-size: 16px;
+    padding: 0.75em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.form-btn.small {
+    font-size: 17px;
+    padding: 0.75em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+.form-btn.positive {
+    background-color: #4431bf;
+    border-color: #4431bf;
+    color: white;
+}
+.form-btn.neutral {
+    background-color: white;
+    border-color: #4431bf;
+    color: #4431bf;
+}
+.form-btn.large:hover,
+.form-btn.medium:hover,
+.form-btn.small:hover {
+    filter: brightness(120%);
+}
+.form-btn.positive[disabled],
+.form-btn.positive[disabled]:hover {
+    cursor: unset;
+    background-color: rgb(211, 209, 234);
+    border-color: rgb(211, 209, 234);
+    filter: none;
+}
+.form-btn, .form-input, select.form-input{
+    vertical-align: bottom;
+}
+
+/*
+    a태그 개조
+*/
+a.form-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+a.link {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+a.link.warning {
+    color: #c10e0e;
+    text-decoration: none;
+}
+a.link:hover {
+    font-weight: bold;
+    color: #211572;
+}
+a.link.warning:hover {
+    font-weight: bold;
+    color: #ab0606;
+}
+/*
+    select 추가 및 수정본
+*/
+select.form-input.large, .form-btn.large {
+    height: 2.94em;
+}
+select.form-input.medium, .form-btn.medium {
+    height: 2.9em;
+}
+select.form-input.small, .form-btn.small {
+    height: 2.4em;
+}
+/*
+    표(table) 스타일
+*/
+/* 칸 내부 여백 */
+.table > thead > tr > th,
+.table > thead > tr > td, 
+.table > tbody > tr > th, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+    padding: 0.75em;
+}
+/* .table-border: 전체 테두리 */
+.table.table-border,
+.table.table-border > thead > tr > th, 
+.table.table-border > thead > tr > td, 
+.table.table-border > tbody > tr > th, 
+.table.table-border > tbody > tr > td, 
+.table.table-border > tfoot > tr > th, 
+.table.table-border > tfoot > tr > td {
+    border: 1px solid #4431bf;
+}
+/* .table-row: 가로선만 있는 테이블 */
+.table.table-row {
+    border-bottom: 2px solid #4431bf;
+}
+.table.table-row > thead,
+.table.table-row > tfoot {
+    /* border-top: 2px solid #4431bf; */
+    border-bottom: 2px solid #4431bf;
+    color: #4431bf;
+}
+.table.table-row > tbody > tr:not(:last-child) {
+    border-bottom: 1px dotted #cac3f2;
+}
+/* .table-striped: 줄무늬 표 */
+.table.table-striped > thead > tr,
+.table.table-striped > tfoot > tr {
+    background-color: #8297ff;
+    color: white;
+}
+.table.table-striped > tbody > tr:nth-child(2n) {
+    background-color: #e4e8ff;
+}
+.table.table-striped > tbody > tr:nth-child(2n-1) {
+    background-color: #f5f7ff;
+}
+/* .table-hover: hover시 설정 */
+.table.table-hover > tbody > tr:hover {
+    background-color: #f5f7ff;
+}
+
+
+/* 페이지네이션 */
+.pagination {
+    text-align: center;
+}
+.pagination > a {
+    display: inline-block;
+    color: rgb(169, 169, 169);
+    text-decoration: none;
+    font-size: 13px;
+    min-width: 2.25em;
+    padding: 0.4em;
+    text-align: center;
+}
+.pagination > a.on,
+.pagination > a:hover:not(.disabled) {
+    color: #4431bf;
+    font-weight: bold;
+}
+.pagination > a.disabled {
+    cursor: default;
+}

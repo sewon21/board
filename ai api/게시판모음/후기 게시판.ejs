@@ -1,0 +1,87 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="블로그.css">
+</head>
+<a href="로그아웃.html">로그아웃</a>
+<form action="/review_board" method="GET" enctype="multipart/form-data">
+    <div class="container-1000">
+        <!-- 제목 -->
+        <div class="row">
+            <h1 class="title pb-20">후기 게시판</h1>
+        </div>
+        <!-- 글쓰기버튼, 검색창 -->
+        <div class="row" style="display: flex;">
+          <!-- 등록버튼 -->
+          <div class="left w-25"> 
+              <a href="/review_board/post">
+                  <button class="form-btn small positive w-50" type="button">글쓰기</button>
+              </a>
+          </div>
+        </div>
+            <!-- 검색창 -->
+            <div class="right w-75 pb-20">
+                <!-- 카테고리 -->
+                <select class="form-input small w-15" name="column">
+                    <option value="title" <% if (vo.column === 'title') { %>selected<% } %>>제목</option>
+                    <option value="content" <% if (vo.column === 'content') { %>selected<% } %>>내용</option>
+                    <option value="member_id" <% if (vo.column === 'member_id') { %>selected<% } %>>작성자</option>
+                    <option value="board_category" <% if (vo.column === 'board_category') { %>selected<% } %>>카테고리</option>
+                </select>
+                <!-- 검색창 -->
+                <input class="form-input small w-40" type="text" name="keyword" placeholder="검색어를 입력하세요." value="<%= vo.keyword %>">
+                <!-- 검색버튼 -->
+                <button class="form-btn small positive w-10" type="submit">검색</button>
+            </div>
+        </div>
+        <!-- 목록 -->
+        <div class="row">
+            <table class="table table-row table-hover w-100">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th class="w-29">제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>좋아요</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody class="center">
+                    <% for (var i = 0; i < vo.boardList.length; i++) { %>
+                      <% var board = vo.boardList[i]; %>
+                      <tr style="background-color: #f5f7ff;">
+                        <td><%= board.num %></td>
+                        <td class="left">
+                          <a class="link" href="/board/<%= board.num %>">
+                            <%= board.title %>
+                          </a>
+                          <% if (board.boardComment != 0) { %>
+                            <%= board.boardComment %>
+                          <% } %>                         </td>
+                        <td><%= board.member_id %></td>
+                        <td><%= board.rdate%></td>
+                        <td><%= board.liked %></td>
+                        <td><%= board.hits %></td>
+                      </tr>
+                    <% } %>
+                  </tbody>
+                  </table>
+                  </div>
+                    
+                  <!-- 페이지 네비 -->
+                  <a href="/">메인</a>
+                  
+                  <div class="row pagination pt-20">
+                    <% if (vo.startPage - vo.pageBlockSize > 0) { %>
+                      <a href="/review_board?page=<%= Math.max(1, vo.startPage - vo.pageBlockSize) %>&column=<%= vo.column %>&keyword=<%= vo.keyword %>">이전</a>
+                    <% } %>
+                    <% for (let i = vo.startPage; i <= vo.endPage; i++) { %>
+                      <% if (i === vo.page) { %>
+                        <a href="/review_board?page=<%= i %>&column=<%= vo.column %>&keyword=<%= vo.keyword %>" class="active"><%= i %></a>
+                      <% } else { %>
+                        <a href="/review_board?page=<%= i %>&column=<%= vo.column %>&keyword=<%= vo.keyword %>"><%= i %></a>
+                      <% } %>
+                    <% } %>
+                    <% if (vo.endPage < vo.countTotalPage) { %>
+                      <a href="/review_board?page=<%= vo.endPage + 1 %>&column=<%= vo.column %>&keyword=<%= vo.keyword %>">다음</a>
+                    <% } %>
+                  </div>
